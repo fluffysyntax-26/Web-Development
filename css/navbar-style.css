@@ -1,0 +1,70 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; 
+    padding: 20px; 
+    background-color: #181818;
+    color: #e0e0e0;
+}
+
+.nav-container{
+    margin-bottom: 40px;
+}
+
+h2{
+    margin-bottom: 10px;
+}
+
+.nav1{
+    background-color: #282828;
+    padding: 10px; /* This padding gives space around the entire UL */
+    border-radius: 10px;
+}
+
+.nav1 ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0; 
+    padding: 0; /* FIX: Changed from 5px to 0. The parent .nav1 already has padding. This also removes the default browser padding on the ul. */
+    align-items: center;
+}
+
+.nav1 li{
+    display: inline; 
+}
+
+.nav1 a{ 
+    text-decoration: none;
+    color: white; 
+    background-color: #404040;
+    padding: 8px 16px; /* FIX: Increased padding for better visual balance and a larger click target. */
+    border-radius: 10px;
+    position: relative; 
+}
+
+.nav1 a::after{
+    content: "";
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 2px; 
+    background-color: rgb(216, 216, 216);
+    transform: scaleX(0);
+
+    transition: transform 0.3s ease-in-out; 
+}
+
+.nav1 a:hover::after{
+    transform: scaleX(1); 
+}
+
+.nav1 .login-btn{
+    color: white;
+    cursor: pointer;
+    margin: 0; 
+    border: none;  
+    border-radius: 10px;
+    background-color: #757575;
+    padding: 8px 16px; /* FIX: Made padding consistent with the other links. */
+}
