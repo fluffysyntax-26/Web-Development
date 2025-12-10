@@ -4,7 +4,186 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navigation Bar Variations</title>
-    <link rel="stylesheet" href="navbar-style.css">
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #242424;
+        color: #fff;
+      }
+      .nav-container {
+        margin-bottom: 40px;
+      }
+      h2 {
+        margin-bottom: 10px;
+      }
+      .nav1 {
+        background-color: #eaeaea;
+        padding: 10px;
+      }
+      .nav1 ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .nav1 li {
+        display: inline;
+      }
+      .nav1 a {
+        text-decoration: none;
+        color: #202020;
+        /* background-color: #d45b04; */
+        padding: 5px 15px;
+        position: relative;
+      }
+
+      .nav1 a::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: #0a65c7;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      .nav1 a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .nav1 .login-btn {
+        background-color: #254bf6;
+        color: #fff;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .nav2 {
+        border: solid pink 2px; 
+        background-color: palevioletred;
+        width: 100px; 
+        padding: 10px; 
+      }
+
+      .nav2 ul {
+        list-style-type: None; 
+        margin: 0; 
+        padding: 0; 
+
+      }
+
+      .nav2 li {
+        margin-bottom: 12px; 
+      }
+
+     /* --- Navigation Links (a) Styles --- */
+.nav2 a{
+        text-decoration: none;
+        color: white; /* Deep Indigo/Purple for contrast */
+        display: block;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px; /* Softer, rounded edges */
+        box-sizing: border-box; /* Ensure padding doesn't increase width */
+        transition: background-color 0.3s ease, color 0.3s ease;
+                font-family: 'Comic Sans MS', 'Sniglet', cursive;
+
+      }
+
+/* --- Login Button Styles --- */
+.nav2 .login-btn{
+        /* Cute Pink Base Color */
+        background-color: #ffb6c1; /* Light Pink */
+        color: #8b008b; /* Dark Magenta/Violet for contrast */
+        border: none;
+        width: 100%;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 8px; /* Slightly more rounded than links */
+
+        /* Cute Font Addition */
+        font-family: 'Comic Sans MS', 'Sniglet', cursive;
+        transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+/* --- Login Button Hover Effect (Pink Hover) --- */
+.nav2 .login-btn:hover {
+        background-color: #ff69b4; /* Hot Pink on hover */
+        color: white; /* White text for contrast on darker pink */
+        box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4); /* Pink shadow for "lifting" effect */
+      }
+
+/* --- Navigation Link Hover Effect (Lavender Hover) --- */
+.nav2 a:hover{
+        background-color: #e6e6fa; /* Lavender/Light Lilac on hover */
+        color: #4b0082; /* Keep dark text on light hover */
+      }
+      /* --- Navigation Bar Container --- */
+.nav3 {
+        background-color: lightskyblue; /* Light Blue base for the whole bar */
+        padding: 10px;
+        border-radius: 12px; /* Soft, rounded corners for the bar */
+      }
+      .nav3 ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      /* --- Navigation Links --- */
+      .nav3 a {
+        text-decoration: none;
+        color: #fff; /* Bright white text for contrast */
+        padding: 10px 15px; /* Slightly more padding */
+        display: block;
+        /* Consider using 'Bubblegum Sans' for max cuteness, or keep Candara */
+        font-family: 'Bubblegum Sans', 'Candara', 'Calibri', sans-serif;
+        transition: background-color 0.3s ease;
+        border-radius: 8px; /* Rounded pill shape for links */
+      }
+
+      /* Hover Effect for Links */
+      .nav3 a:hover:not(.dropdown-content a) {
+        background-color: #6495ed; /* Cornflower Blue on hover */
+      }
+
+      /* --- Dropdown Specific Styles --- */
+      .nav3 .dropdown-content {
+        display: none;
+      }
+
+      .nav3 .dropdown:hover .dropdown-content {
+        display: block;
+        position: absolute;
+        background-color: #a0e6ff; /* Very light cyan/sky blue background */
+        min-width: 150px;
+        z-index: 10; /* Ensure it appears above other content */
+        border-radius: 0 0 8px 8px; /* Only round the bottom corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Dropdown Links */
+      .nav3 .dropdown-content a {
+        color: #000080; /* Darker blue text for better contrast on light dropdown */
+        padding: 10px;
+        border-radius: 0; /* No rounding inside the dropdown box */
+      }
+
+      /* Dropdown Link Hover Effect */
+      .nav3 .dropdown-content a:hover {
+        background-color: #40e0d0; /* Turquoise/Cyan on hover */
+      }
+    </style>
   </head>
   <body>
     <div class="nav-container">

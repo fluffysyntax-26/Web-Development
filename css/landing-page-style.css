@@ -1,0 +1,47 @@
+body, html{ 
+    margin: 0; 
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%; 
+}
+
+.container {
+    background: linear-gradient(135deg, purple, red);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.content {
+    text-align: center;
+    background-color: white;
+    padding: 2rem; 
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+.logo { 
+    width: 200px;
+    object-fit: contain;
+}
+
+h1{
+    color: brown; 
+    margin-bottom: 20px;
+
+}
+
+p {
+    color: darkgray; 
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex; 
+    flex-direction: column;
+}
+
+input{
+    
+}
