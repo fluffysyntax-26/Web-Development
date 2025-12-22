@@ -15,7 +15,7 @@ function orderTea(teaType){
 
 orderTea("Orange tea")
 
-// question 3 
+// question 3
 
 function makeTea(typeOfTea){
     return `Type of tea ${typeOfTea}`
